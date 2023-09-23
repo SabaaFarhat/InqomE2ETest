@@ -127,7 +127,8 @@ async function testVerifyAuthenticationBeforeUpload(page) {
 
 async function testServerErrorDuringUpload(page) {
   try {
-    const inputFile = await page.locator('button:has-text("Importer une image")').click();
+    const inputFile = await page.$('button[name="Importer une image"]');
+    await inputFile.click();
     await inputFile.setInputFiles('./upload/hello.jpeg');
     await page.waitForSelector('text=Erreur serveur (500)'); 
     await expect(page.locator('text=Erreur serveur')).toBeVisible();    
