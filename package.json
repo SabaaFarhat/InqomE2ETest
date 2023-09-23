@@ -1,0 +1,17 @@
+{
+  "name": "inqomtesttech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.38.0",
+    "@types/node": "^20.6.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
